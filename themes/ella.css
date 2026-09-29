@@ -1,0 +1,53 @@
+/* Ella's stylesheet
+
+   To see it: open index.html in your browser, add ?theme=ella
+   to the end of the address, and reload after every change.
+
+   Only change this file: no HTML, and no one else's CSS.
+   Everything on the page you can style is listed below. Fill in the ones
+   you want; empty rules do nothing, so you can leave the rest as they are. */
+
+
+/* The whole page: a good place for the typeface, text size and background */
+body {
+}
+
+/* The block with all the text */
+#content {
+}
+
+/* The title: "In-Class Exercise: Fork, Pull and Push" */
+h1 {
+}
+
+/* The date in the title */
+time {
+}
+
+/* Paragraphs */
+p {
+}
+
+/* The numbered list of steps */
+ol {
+}
+
+/* One step */
+li {
+}
+
+/* The bold words at the start of each step: "Fork:", "Clone:" ... */
+strong {
+}
+
+/* File names and code, e.g. themes */
+code {
+}
+
+/* The link to the repository */
+a {
+}
+
+/* The link when the mouse is over it */
+a:hover {
+}

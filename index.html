@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fork, Pull and Push</title>
+  <script>
+    // Add ?theme=<your first name> to the address to load themes/<your first name>.css
+    const theme = new URLSearchParams(location.search).get('theme');
+    if (theme && /^[a-z]+$/.test(theme)) {
+      document.write('<link rel="stylesheet" href="themes/' + theme + '.css">');
+    }
+  </script>
+</head>
+<body>
+
+<main id="content">
+
+  <h1>In-Class Exercise: Fork, Pull and Push (<time datetime="2026-09-29">Sep 29, 2026</time>)</h1>
+
+  <p>This page is going to become a shared design project. The HTML stays the same for everyone, but each of you will write your own stylesheet for it.</p>
+
+  <p>To add your stylesheet, you'll use the same workflow designers and developers use to contribute to projects they don't own:</p>
+
+  <ol>
+    <li><strong>Fork:</strong> make your own copy of this repository on GitHub: <a href="https://github.com/severinbunse/fork-pull-push" target="_blank" rel="noopener">github.com/severinbunse/fork-pull-push</a></li>
+    <li><strong>Clone:</strong> download your fork to your computer and open it in VS Code.</li>
+    <li><strong>Style:</strong> in the <code>themes</code> folder, open the file with your first name, for example <code>themes/kitty.css</code>. It already lists everything on this page you can style, so you can focus on styling. To see your changes, open <code>index.html</code> in your browser and add <code>?theme=kitty</code> (with your name) to the end of the address. Change only your own file: no HTML, and no one else's CSS.</li>
+    <li><strong>Push:</strong> commit your changes and push them to your fork.</li>
+    <li><strong>Pull request:</strong> on GitHub, open a pull request from your fork to this repository. I'll review it and merge it.</li>
+  </ol>
+
+  <p>Share the link to your pull request when you're done.</p>
+
+</main>
+
+</body>
+</html>
