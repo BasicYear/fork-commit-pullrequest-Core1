@@ -1,111 +1,68 @@
-/* Renee's stylesheet
-
-   To see it: open index.html in your browser, choose your name from
-   the Stylesheet menu at the top, and reload after every change.
-
-   Only change this file: no HTML, and no one else's CSS.
-   Everything on the page you can style is listed below. Fill in the ones
-   you want; empty rules do nothing, so you can leave the rest as they are. */
-
-/* ---------- The whole page ---------- */
-
-/* The whole browser window, behind everything else */
 html {
 }
 
-/* The whole page: a good place for the typeface, text size and background */
 body {
 }
 
-/* Text you highlight with the mouse */
 ::selection {
 }
 
-
-/* ---------- The Stylesheet menu ---------- */
-
-/* The whole menu at the top of the page */
 #theme-switcher {
 }
 
-/* The word "Stylesheet:" */
 label {
 }
 
-/* The dropdown with the names */
 select {
 }
 
-
-/* ---------- The exercise ---------- */
-
-/* The block with all the text */
 #content {
 }
 
-/* The title: "In-Class Exercise: Fork, Commit & Pull Request" */
 h1 {
 }
 
-/* The first letter of the title, e.g. for a big drop cap */
 h1::first-letter {
 }
 
-/* Add something before or after the title,
-   e.g. content: "★ "; (the content property is required here) */
 h1::before {
 }
 
 h1::after {
 }
 
-/* The date in the title */
 time {
 }
 
-/* Paragraphs */
 p {
 }
 
-/* The numbered list of steps */
 ol {
 }
 
-/* One step */
 li {
 }
 
-/* Every other step: the 2nd and 4th */
 li:nth-child(even) {
 }
 
-/* A step when the mouse is over it */
 li:hover {
 }
 
-/* The numbers 1 to 5 in front of the steps */
 li::marker {
 }
 
-/* The bold words in the steps: "Fork:", "Download:", "Code → Download ZIP" ... */
 strong {
 }
 
-/* File names, e.g. themes/kitty.css */
 code {
 }
 
-
-/* ---------- Links ---------- */
-
-/* Links: the link to the repository */
 a {
 }
 
-/* A link you have already clicked */
 a:visited {
 }
 
-/* A link when the mouse is over it */
 a:hover {
 }
