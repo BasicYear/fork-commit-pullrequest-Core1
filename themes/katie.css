@@ -1,7 +1,7 @@
 /* Katie's stylesheet
 
-   To see it: open index.html in your browser, add ?theme=katie
-   to the end of the address, and reload after every change.
+   To see it: open index.html in your browser, choose your name from
+   the Stylesheet menu at the top, and reload after every change.
 
    Only change this file: no HTML, and no one else's CSS.
    Everything on the page you can style is listed below. Fill in the ones
@@ -10,6 +10,10 @@
 
 /* The whole page: a good place for the typeface, text size and background */
 body {
+}
+
+/* The Stylesheet menu at the top of the page */
+#theme-switcher {
 }
 
 /* The block with all the text */

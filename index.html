@@ -4,15 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fork, Pull and Push</title>
+  <!-- The stylesheet chosen in the menu at the top of the page -->
+  <link id="theme-stylesheet" rel="stylesheet">
   <script>
-    // Add ?theme=<your first name> to the address to load themes/<your first name>.css
-    const theme = new URLSearchParams(location.search).get('theme');
+    // Load the stylesheet that was chosen last time, so it stays on when you reload
+    let theme = new URLSearchParams(location.search).get('theme');
+    try {
+      theme = theme || localStorage.getItem('theme');
+    } catch (error) {}
     if (theme && /^[a-z]+$/.test(theme)) {
-      document.write('<link rel="stylesheet" href="themes/' + theme + '.css">');
+      document.getElementById('theme-stylesheet').href = 'themes/' + theme + '.css';
+    } else {
+      theme = '';
     }
   </script>
 </head>
 <body>
+
+<nav id="theme-switcher">
+  <label for="theme-select">Stylesheet:</label>
+  <select id="theme-select">
+    <option value="">None</option>
+    <option value="aara">Aara</option>
+    <option value="amber">Amber</option>
+    <option value="ella">Ella</option>
+    <option value="florence">Florence</option>
+    <option value="isabella">Isabella</option>
+    <option value="jackson">Jackson</option>
+    <option value="katie">Katie</option>
+    <option value="kitty">Kitty</option>
+    <option value="liv">Liv</option>
+    <option value="lulu">Lulu</option>
+    <option value="renee">Renee</option>
+    <option value="sara">Sara</option>
+    <option value="severin">Severin</option>
+    <option value="sofia">Sofia</option>
+    <option value="tarni">Tarni</option>
+    <option value="undarga">Undarga</option>
+    <option value="victoria">Victoria</option>
+  </select>
+</nav>
 
 <main id="content">
 
@@ -25,12 +56,29 @@
   <ol>
     <li><strong>Fork:</strong> make your own copy of this repository on GitHub: go to <a href="https://github.com/severinbunse/fork-pull-push" target="_blank" rel="noopener">github.com/severinbunse/fork-pull-push</a> and click <strong>Fork</strong>.</li>
     <li><strong>Download:</strong> on your fork, click <strong>Code → Download ZIP</strong>, unzip it, and open the folder in VS Code.</li>
-    <li><strong>Style:</strong> in the <code>themes</code> folder, open the file with your first name, for example <code>themes/kitty.css</code>. It already lists everything on this page you can style, so you can focus on styling. To see your changes, open <code>index.html</code> in your browser and add <code>?theme=kitty</code> (with your name) to the end of the address, then reload after every change. Change only your own file: no HTML, and no one else's CSS.</li>
+    <li><strong>Style:</strong> in the <code>themes</code> folder, open the file with your first name, for example <code>themes/kitty.css</code>. It already lists everything on this page you can style, so you can focus on styling. To see your changes, open <code>index.html</code> in your browser, choose your name from the <strong>Stylesheet</strong> menu at the top of the page, and reload after every change. Change only your own file: no HTML, and no one else's CSS.</li>
     <li><strong>Commit:</strong> on your fork on GitHub, open your CSS file and click the pencil icon to edit it. Select everything in the editor, paste in your code from VS Code, and click <strong>Commit changes</strong>.</li>
     <li><strong>Pull request:</strong> on your fork, click <strong>Contribute → Open pull request</strong>, then <strong>Create pull request</strong>. I'll review it and merge it.</li>
   </ol>
 
 </main>
+
+<script>
+  // Switch stylesheets with the menu at the top of the page
+  const select = document.getElementById('theme-select');
+  const stylesheet = document.getElementById('theme-stylesheet');
+  select.value = theme;
+  select.addEventListener('change', function () {
+    if (select.value) {
+      stylesheet.href = 'themes/' + select.value + '.css';
+    } else {
+      stylesheet.removeAttribute('href');
+    }
+    try {
+      localStorage.setItem('theme', select.value);
+    } catch (error) {}
+  });
+</script>
 
 </body>
 </html>
