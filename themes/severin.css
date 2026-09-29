@@ -2,12 +2,17 @@ html {
 }
 
 body {
+    background-color: blue;
 }
 
 ::selection {
 }
 
 #theme-switcher {
+    background: yellow;
+  color: white;
+  padding: 12px;
+  font-family: monospace;
 }
 
 label {
